@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_auth">
+
+    <fragment
+        android:id="@+id/navigation_auth"
+        android:name="com.example.innervoid.ui.auth.AuthFragment"
+        android:label="Авторизация">
+        <action
+            android:id="@+id/action_navigation_auth_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_auth"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.innervoid.ui.home.HomeFragment"
+        android:label="Главная" />
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.innervoid.ui.cart.CartFragment"
+        android:label="Корзина" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.innervoid.ui.profile.ProfileFragment"
+        android:label="Профиль">
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_auth"
+            app:destination="@id/navigation_auth"
+            app:popUpTo="@id/navigation_profile"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_customization"
+            app:destination="@id/navigation_customization" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_messages"
+            app:destination="@id/navigation_messages" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_customization"
+        android:name="com.example.innervoid.ui.customization.CustomizationFragment"
+        android:label="Кастомизация" />
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.example.innervoid.ui.messages.MessagesFragment"
+        android:label="Сообщения" />
+
+</navigation> 

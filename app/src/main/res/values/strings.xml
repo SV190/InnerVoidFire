@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InnerVoid</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_products">Products</string>
+    <string name="navigation_cart">Cart</string>
+    <string name="navigation_profile">Profile</string>
+    <string name="product_image">Product Image</string>
+    <string name="price_format">%.2f ₽</string>
+    <string name="title_home">Главная</string>
+    <string name="title_cart">Корзина</string>
+    <string name="title_customization">Кастомизация</string>
+    <string name="title_messages">Сообщения</string>
+    <string name="title_profile">Профиль</string>
+</resources>

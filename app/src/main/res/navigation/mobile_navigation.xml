@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.innervoid.ui.home.HomeFragment"
+        android:label="@string/title_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_product"
+            app:destination="@id/navigation_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.innervoid.ui.cart.CartFragment"
+        android:label="@string/title_cart" />
+
+    <fragment
+        android:id="@+id/navigation_customization"
+        android:name="com.example.innervoid.ui.customization.CustomizationFragment"
+        android:label="@string/title_customization" />
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.example.innervoid.ui.messages.MessagesFragment"
+        android:label="@string/title_messages" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.innervoid.ui.profile.ProfileFragment"
+        android:label="@string/title_profile" />
+
+    <fragment
+        android:id="@+id/navigation_product"
+        android:name="com.example.innervoid.ui.product.ProductFragment"
+        android:label="Product">
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+
+    <!-- Админские фрагменты -->
+    <fragment
+        android:id="@+id/navigation_admin_home"
+        android:name="com.example.innervoid.ui.admin.AdminHomeFragment"
+        android:label="Админ: Главная" />
+
+    <fragment
+        android:id="@+id/navigation_admin_messages"
+        android:name="com.example.innervoid.ui.admin.AdminMessagesFragment"
+        android:label="Админ: Сообщения" />
+
+    <fragment
+        android:id="@+id/navigation_admin_profile"
+        android:name="com.example.innervoid.ui.admin.AdminProfileFragment"
+        android:label="Админ: Профиль" />
+
+</navigation> 
