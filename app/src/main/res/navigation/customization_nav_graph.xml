@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customization_nav_graph"
+    app:startDestination="@id/selectPrintFragment">
+
+    <fragment
+        android:id="@+id/selectPrintFragment"
+        android:name="com.example.innervoid.ui.customization.SelectPrintFragment"
+        android:label="Выбор принта">
+        <action
+            android:id="@+id/action_selectPrint_to_positionPrint"
+            app:destination="@id/positionPrintFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/positionPrintFragment"
+        android:name="com.example.innervoid.ui.customization.PositionPrintFragment"
+        android:label="Позиционирование принта">
+        <action
+            android:id="@+id/action_positionPrint_to_sizeAndWishes"
+            app:destination="@id/sizeAndWishesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sizeAndWishesFragment"
+        android:name="com.example.innervoid.ui.customization.SizeAndWishesFragment"
+        android:label="Размер и пожелания" />
+
+</navigation> 

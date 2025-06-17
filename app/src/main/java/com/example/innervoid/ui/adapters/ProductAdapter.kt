@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.innervoid.data.models.Product
+import com.example.innervoid.data.model.Product
 import com.example.innervoid.databinding.ItemProductBinding
 
-class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(ProductDiffCallback()) {
+class ProductAdapter(
+    private val onItemClick: (Product) -> Unit
+) : ListAdapter<Product, ProductAdapter.ProductViewHolder>(ProductDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val binding = ItemProductBinding.inflate(
@@ -24,16 +26,24 @@ class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(Pr
         holder.bind(getItem(position))
     }
 
-    class ProductViewHolder(
+    inner class ProductViewHolder(
         private val binding: ItemProductBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClick(getItem(position))
+                }
+            }
+        }
 
         fun bind(product: Product) {
             binding.apply {
                 productName.text = product.name
-                productPrice.text = "${product.price} ₽"
-                productDescription.text = product.description
-
+                productPrice.text = product.price.toString()
+                
                 Glide.with(productImage)
                     .load(product.imageUrl)
                     .centerCrop()

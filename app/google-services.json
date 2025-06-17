@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1080801179594",
+    "project_id": "store-cb16e",
+    "storage_bucket": "store-cb16e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080801179594:android:b48ad200b55098efed0133",
+        "android_client_info": {
+          "package_name": "com.example.innervoid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBefhvjOrC92FdTEgD1QMQlaFkdd9xJ-g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

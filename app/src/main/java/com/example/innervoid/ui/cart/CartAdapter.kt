@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.innervoid.data.model.CartItem
 import com.example.innervoid.databinding.ItemCartBinding
 
 class CartAdapter(
-    private val onRemoveClick: (CartItem) -> Unit
+    private val onQuantityChanged: (CartItem, Int) -> Unit,
+    private val onRemoveItem: (CartItem) -> Unit
 ) : ListAdapter<CartItem, CartAdapter.CartViewHolder>(CartDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
@@ -30,24 +32,39 @@ class CartAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: CartItem) {
-            binding.productName.text = item.name
-            binding.productSize.text = "Размер: ${item.size}"
-            binding.productPrice.text = "${item.price} ₽"
+            binding.apply {
+                productName.text = item.name
+                productPrice.text = "${item.price} ₽"
+                productSize.text = "Размер: ${item.size}"
+                quantityText.text = item.quantity.toString()
 
-            Glide.with(binding.root)
-                .load(item.imageUrl)
-                .centerCrop()
-                .into(binding.productImage)
+                // Загрузка изображения
+                Glide.with(productImage)
+                    .load(item.imageUrl)
+                    .centerCrop()
+                    .into(productImage)
 
-            binding.removeButton.setOnClickListener {
-                onRemoveClick(item)
+                // Обработчики кнопок
+                decreaseButton.setOnClickListener {
+                    if (item.quantity > 1) {
+                        onQuantityChanged(item, item.quantity - 1)
+                    }
+                }
+
+                increaseButton.setOnClickListener {
+                    onQuantityChanged(item, item.quantity + 1)
+                }
+
+                removeButton.setOnClickListener {
+                    onRemoveItem(item)
+                }
             }
         }
     }
 
     private class CartDiffCallback : DiffUtil.ItemCallback<CartItem>() {
         override fun areItemsTheSame(oldItem: CartItem, newItem: CartItem): Boolean {
-            return oldItem.id == newItem.id && oldItem.size == newItem.size
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: CartItem, newItem: CartItem): Boolean {

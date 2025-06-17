@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/navigation_admin_home">
+
+    <fragment
+        android:id="@+id/navigation_admin_home"
+        android:name="com.example.innervoid.ui.admin.AdminHomeFragment"
+        android:label="Админ: Главная" />
+
+    <fragment
+        android:id="@+id/navigation_admin_messages"
+        android:name="com.example.innervoid.ui.admin.AdminMessagesFragment"
+        android:label="Админ: Сообщения" />
+
+    <fragment
+        android:id="@+id/navigation_admin_profile"
+        android:name="com.example.innervoid.ui.admin.AdminProfileFragment"
+        android:label="Админ: Профиль" />
+
+</navigation> 

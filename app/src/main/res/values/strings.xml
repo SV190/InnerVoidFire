@@ -8,8 +8,11 @@
     <string name="product_image">Product Image</string>
     <string name="price_format">%.2f ₽</string>
     <string name="title_home">Главная</string>
+    <string name="title_catalog">Каталог</string>
     <string name="title_cart">Корзина</string>
     <string name="title_customization">Кастомизация</string>
     <string name="title_messages">Сообщения</string>
     <string name="title_profile">Профиль</string>
+    <string name="title_dashboard">Дашборд</string>
+    <string name="title_notifications">Уведомления</string>
 </resources>

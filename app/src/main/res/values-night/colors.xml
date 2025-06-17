@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Основные цвета для темной темы -->
     <color name="primary">#89ff00</color>
     <color name="primary_dark">#89ff00</color>
     <color name="primary_light">#89ff00</color>
     <color name="accent">#89ff00</color>
     <color name="accent_dark">#89ff00</color>
-    <color name="primary_text">#000000</color>
-    <color name="secondary_text">#B3000000</color>
-    <color name="icons">#000000</color>
-    <color name="divider">#1F000000</color>
+    
+    <!-- Темные цвета -->
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#B3FFFFFF</color>
+    <color name="icons">#89ff00</color>
+    <color name="divider">#1FFFFFFF</color>
     <color name="background">#121212</color>
     <color name="error">#CF6679</color>
+    
+    <!-- Навигация -->
     <color name="bottom_nav_inactive">#757575</color>
     <color name="bottom_nav_active">#89ff00</color>
     <color name="bottom_nav_background">#121212</color>
     <color name="status_bar">#000000</color>
+    
+    <!-- Цвета для заголовков и шапки (только шапка черная) -->
+    <color name="header_background">#000000</color>
+    <color name="header_text">#FFFFFF</color>
+    
+    <!-- Цвета для сообщений (золотые) -->
+    <color name="message_user_background">#009688</color>
+    <color name="message_user_text">#FF000000</color>
+    <color name="message_admin_background">#FFFFFF</color>
+    <color name="message_admin_text">#FF000000</color>
 </resources> 

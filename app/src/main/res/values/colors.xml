@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#89ff00</color>
-    <color name="purple_500">#075800</color>
-    <color name="purple_700">#075800</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="bottom_nav_inactive">#757575</color>
-    <color name="bottom_nav_active">#FF6200EE</color>
-    <color name="bottom_nav_background">#FFFFFF</color>
+    <!-- Основные цвета приложения -->
     <color name="primary">#075800</color>
     <color name="primary_dark">#075800</color>
-    <color name="primary_light">#075800</color>
+    <color name="primary_light">#89ff00</color>
     <color name="accent">#075800</color>
     <color name="accent_dark">#075800</color>
+    
+    <!-- Базовые цвета -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#424242</color>
+    <color name="medium_gray">#757575</color>
+    <color name="light_gray">#EEEEEE</color>
+    
+    <!-- Текстовые цвета -->
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
     <color name="background">#FFFFFF</color>
-    <color name="error">#B00020</color>
+    <color name="error">#D32F2F</color>
+    
+    <!-- Навигация -->
+    <color name="bottom_nav_inactive">#757575</color>
+    <color name="bottom_nav_active">#075800</color>
+    <color name="bottom_nav_background">#FFFFFF</color>
+    
+    <!-- Цвета для сообщений (золотые) -->
+    <color name="message_user_background">#4CAF50</color>
+    <color name="message_user_text">#FF000000</color>
+    <color name="message_admin_background">#FFFFFF</color>
+    <color name="message_admin_text">#FF000000</color>
+    
+    <!-- Цвета для заголовков и шапки -->
+    <color name="header_background">#075800</color>
+    <color name="header_text">#FFFFFF</color>
+    <color name="status_bar">#075800</color>
+    
+    <!-- Совместимость с Material Design -->
+    <color name="colorPrimary">#075800</color>
+    <color name="colorPrimaryDark">#075800</color>
+    <color name="colorAccent">#89ff00</color>
+    <color name="purple_200">#075800</color>
+    <color name="purple_500">#075800</color>
+    <color name="purple_700">#075800</color>
+    <color name="teal_200">#89ff00</color>
+    <color name="teal_700">#89ff00</color>
 </resources>
